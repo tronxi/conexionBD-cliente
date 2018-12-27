@@ -1,0 +1,23 @@
+<div class="contenedor">
+  <mat-form-field>
+    <input matInput [(ngModel)]="nombre" placeholder="nombre" type="text" class="formulario">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="enviar()" class="boton">Enviar</button>
+</div>
+<br>
+<div class="contenedor">
+  <mat-form-field>
+    <input matInput [(ngModel)]="id" placeholder="id" type="number" class="formulario">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="borrar()" class="boton">Borrar</button>
+</div>
+<br>
+<div class="contenedor">
+  <button mat-raised-button color="primary" (click)="mostrar()" class="boton">Mostrar</button>
+</div>
+<br>
+<div *ngIf="activadoMostrar">
+  <div class="contenedor">
+    {{texto}}
+  </div>
+</div>
