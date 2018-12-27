@@ -21,6 +21,7 @@ export class FormularioComponent implements OnInit {
     }
     this.nombre = null;
     this.activadoMostrar = false;
+
   }
   borrar() {
     if (this.id != null) {
