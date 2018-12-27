@@ -35,7 +35,7 @@ export class FormularioComponent implements OnInit {
   mostrar() {
     this.activadoMostrar = true;
     this.conex.mostrarTodos().subscribe((valor: string) => {
-      this.texto = valor.replace(/<br>/g, "<br/>");
+      this.texto = valor.replace(/<br>/g, ' ');
     });
   }
 
