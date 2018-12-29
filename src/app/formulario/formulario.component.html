@@ -17,7 +17,8 @@
 </div>
 <br>
 <div *ngIf="activadoMostrar">
-  <div class="contenedor">
-    {{texto}}
+  <div class="contenedor" *ngFor="let art of texto">
+    {{art.id}} {{art.nombre}}
+    <br>
   </div>
 </div>

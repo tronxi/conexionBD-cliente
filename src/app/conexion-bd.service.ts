@@ -9,9 +9,9 @@ export class ConexionBDService {
   private url = 'http://raspberrytronxi.ddns.net:8000/conexionBD-node';
   private headers: Headers;
   constructor(private http: HttpClient) { }
-
+  
   mostrarTodos() {
-    return this.http.get(this.url + '/buscar', {responseType: 'text'});
+    return this.http.get(this.url + '/buscar');
   }
   borrarId(idUser: number) {
     return this.http.post(this.url + '/borrardatos', {id: idUser});

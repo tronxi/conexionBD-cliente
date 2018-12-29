@@ -9,7 +9,7 @@ import {ConexionBDService} from '../conexion-bd.service';
 export class FormularioComponent implements OnInit {
    nombre: string;
    id: number;
-   texto: string;
+   texto = null;
    activadoMostrar: boolean;
   constructor(private conex: ConexionBDService) { }
 
@@ -34,8 +34,8 @@ export class FormularioComponent implements OnInit {
   }
   mostrar() {
     this.activadoMostrar = true;
-    this.conex.mostrarTodos().subscribe((valor: string) => {
-      this.texto = valor.replace(/<br>/g, ' ');
+    this.conex.mostrarTodos().subscribe((valor) => {
+      this.texto = valor;
     });
   }
 
