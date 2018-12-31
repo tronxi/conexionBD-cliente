@@ -14,7 +14,7 @@ export class ConexionBDService {
     return this.http.get(this.url + '/buscar');
   }
   borrarId(idUser: number) {
-    return this.http.post(this.url + '/borrardatos', {id: idUser});
+    return this.http.delete(this.url + '/borrardatos/' + idUser);
   }
   insertarNombre(nombre: string) {
     return this.http.post(this.url + '/insertarDatos', {nombre: nombre});
