@@ -15,7 +15,6 @@ export class FormularioComponent implements OnInit {
 
   enviar() {
     if (this.nombre != null) {
-      console.log(this.nombre);
       this.conex.insertarNombre(this.nombre).subscribe(() => {
       });
     }
@@ -25,7 +24,6 @@ export class FormularioComponent implements OnInit {
   }
   borrar() {
     if (this.id != null) {
-      console.log(this.id);
       this.conex.borrarId(this.id).subscribe(() => {
       });
     }
