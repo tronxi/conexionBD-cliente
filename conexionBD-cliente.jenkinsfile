@@ -3,9 +3,10 @@ pipeline {
   stages {
     stage('prueba') {
       steps {
-        dir("/home/pi/scripts_jenkins/conexionBD-cliente") {
+        dir("/home/pi") {
           sh 'pwd'
-          sh 'conexionBD-cliente.sh'
+          sh 'git pull'
+          sh 'sudo cp -r dist/conexionBDAngular-node /home/pi/servidor'
         }
       }
     }
