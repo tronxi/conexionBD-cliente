@@ -3,11 +3,10 @@ pipeline {
   stages {
     stage('prueba') {
       steps {
-        sh 'cd /home/pi'
-        sh 'pwd'
-        sh 'cd scripts_jenkins'
-        sh 'conexionBD-cliente'
-        sh 'sh conexionBD-cliente.sh'
+        dir("/home/pi/scripts_jenkins/conexionBD-cliente") {
+          sh 'pwd'
+          sh 'conexionBD-cliente.sh'
+        }
       }
     }
   }
