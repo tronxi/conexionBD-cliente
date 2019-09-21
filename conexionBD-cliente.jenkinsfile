@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('prueba') {
       steps {
-        dir("/home/pi") {
+        dir("/home/pi/angular/conexionBD-cliente") {
           sh 'pwd'
           sh 'git pull'
           sh 'sudo cp -r dist/conexionBDAngular-node /home/pi/servidor'
