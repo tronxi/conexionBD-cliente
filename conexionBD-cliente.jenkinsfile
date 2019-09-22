@@ -1,3 +1,4 @@
+properties([parameters([string(defaultValue: 'master', description: 'nombre de la rama a desplegar', name: 'rama', trim: true)]), pipelineTriggers([pollSCM(''), githubPush()])])
 pipeline {
   agent any
   stages {
