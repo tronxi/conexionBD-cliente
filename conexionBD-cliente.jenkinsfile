@@ -5,6 +5,7 @@ pipeline {
     stage('prueba') {
       steps {
         dir("/home/pi/angular/conexionBD-cliente") {
+          echo "rama: ${rama}"
           sh 'pwd'
           sh 'git pull'
           sh 'sudo cp -r dist/conexionBDAngular-node /home/pi/servidor'
